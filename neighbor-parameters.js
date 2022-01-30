@@ -1,15 +1,11 @@
-const mainGrid = [
-  [0, 0, 0],
-  [0, 0, 0],
-  [0, 0, 0],
-];
+import { mainGrid } from './adding-neighbors';
 
-export const neighbors = () => {
-  for (let axisX = 0; axisX < mainGrid.length; axisX++) {
-    for (let axisY = 0; axisY < mainGrid[axisX].length; axisY++) {
-      const cordinates = [axisX, axisY];
-      console.log(cordinates);
-      const myneighbors = [
+export const neighbors = (arr) => {
+  for (let axisX = 0; axisX < arr.length; axisX++) {
+    for (let axisY = 0; axisY < arr[axisX].length; axisY++) {
+      // const coordinates = [axisX, axisY];
+
+      const myNeighbors = [
         [axisX - 1, axisY - 1],
         [axisX - 1, axisY],
         [axisX - 1, +1],
@@ -19,7 +15,6 @@ export const neighbors = () => {
         [axisX + 1, axisY - 1],
         [axisX, axisY - 1],
       ];
-      console.log(myneighbors);
     }
   }
 };
